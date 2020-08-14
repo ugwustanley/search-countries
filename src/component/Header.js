@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 class Header extends Component{
-   
+  
+   handleClick = () =>{
+     this.props.changeMode();
+   }
    render(){
+      const { changeMode } =  this.props ;
     const Header = {
          borderBottom: '1px solid lightgray',
          boxShadow: '1px 1px 2px lightgray',
@@ -26,9 +30,9 @@ class Header extends Component{
             <div >
              <h4 className="where">Where in the World?</h4>
              </div>
-            <div style={mode} className=""> 
+            <div style={mode} onClick={changeMode} className="mode"> 
              <i className="fas fa-moon"></i>
-             <i className="pl-2">Dark mode</i>
+             <i className="pl-2" onClick={ () => this.props.changeMode}>Dark mode</i>
              </div>
              </div>
          </div>
