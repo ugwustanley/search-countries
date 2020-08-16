@@ -6,8 +6,8 @@ class SectionTwo extends Component{
    render(){
       return(
          <div className="container SectionTwo">
-             <Search SearchNames = {this.props.SearchNames} />
-             <Select SearchHandler = {this.props.SearchHandler} state={this.props.state} />
+             <Search SearchNames = {this.props.SearchNames} modal = {this.props.modal} />
+             <Select SearchHandler = {this.props.SearchHandler} state={this.props.state} modal={this.props.modal} />
          </div>
       );
    }
