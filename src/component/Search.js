@@ -6,7 +6,7 @@ class Select extends Component{
        return {
            color:'#fff',
            backgroundColor: 'hsl(209, 23%, 22%)',
-           boxShadow: '1px 1px 2px hsl(209, 10%, 22%)'
+           boxShadow: '1px 1px 2px transparent'
         }
       }else{
          return{

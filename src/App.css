@@ -149,11 +149,21 @@ button{
   color:#444444;
 }
 @media(max-width:500px){
+  .dete1{
+    font-size: 28px;
+  }
+  .dete{
+    font-size:18px;
+  }
   .img-box{
     width:96%;
   }
   .message{
     width:96%;
+  }
+  .img-box{
+    height:300px;
+    min-height: 300px;
   }
 }
 @media (min-width:1000px){

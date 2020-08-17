@@ -10,11 +10,9 @@ class Header extends Component{
         if(this.props.modal){
          return  {
             backgroundColor: 'hsl(209, 23%, 22%)',
-            boxShadow: '1px 1px 1px hsl(209, 10%, 22%)',
+            boxShadow: '1px 1px 1px transparent',
             border: 'none'
           }
-        }else{
-         console.log(this.props.modal)
         }
         
       

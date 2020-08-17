@@ -43,9 +43,7 @@ class App extends Component{
 
     SearchHandler = (event) =>{
               var query =event.target.value;
-              console.log(query)
               this.setState({fetch:`region/${query}`},function(){
-              console.log(this.state.fetch)
               this.componentDidMount()
         })  
 
@@ -54,11 +52,8 @@ class App extends Component{
     // Search for a name in the search box
 
     SearchNames = (event) =>{
-            console.log(event.target.value);
             var query =event.target.value;
-            console.log(query)
             this.setState({fetch:`name/${query}`},function(){
-            console.log(this.state.fetch)
             this.componentDidMount()
         })
          
@@ -67,8 +62,6 @@ class App extends Component{
      // change mode
 
      changeMode = () =>{
-
-         console.log("testing this out");
 
          if(this.state.modal){
                  this.setState({modal: false})
@@ -81,11 +74,7 @@ class App extends Component{
 
        captures = (e) =>{
          let index = e.target.id;
-         console.log(e.target);
-         
-         console.log(this.state.dataSet[index].name)
          this.setState({index:index , popup: true}, function(){
-          console.log(this.state.index)
          })
          
        }
@@ -159,7 +148,7 @@ class App extends Component{
                                                    </div> 
                                         }})}
                                         <ErrorBoundary />
-                                        {this.state.popup? <Details modal={this.state.modal} index={this.state.index} popupUpdate = {this.popupUpdate} dataSet={this.state.dataSet} /> : <div>test</div>}
+                                        {this.state.popup? <Details modal={this.state.modal} index={this.state.index} popupUpdate = {this.popupUpdate} dataSet={this.state.dataSet} /> : <div style={{display:'none'}}>test</div>}
                                         </div>  
                            </div>
          
