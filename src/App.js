@@ -143,7 +143,7 @@ if(!this.state.dataSet.map){
                   <div id={i} key = {data.name} className="box" style={box}>
                  <div className="box-img "><img id={i} src={data.flag} style={{width:'100%',height:'100%'}} className="box-img pt-0 mt-o" alt="country flag"></img></div>
                   <h5 id={i} className="px-3 pt-2 pb-2">{data.name}</h5>
-                  <div id={i} className="datas"><h6 className="pl-3">Populatioin: </h6> <p className="pl-2">{data.population}</p></div>
+                  <div id={i} className="datas"><h6 className="pl-3">Population: </h6> <p className="pl-2">{data.population}</p></div>
                   <div id={i} className="datas"><h6 className="pl-3">Region:</h6><p className="pl-2">{data.region}</p></div>
                   <div id={i} className="datas"><h6 className="pl-3">Capital:</h6><p className="pl-2">{data.capital}</p></div>
                   </div>
