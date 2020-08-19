@@ -6,7 +6,8 @@ class Select extends Component{
        return {
            color:'#fff',
            backgroundColor: 'hsl(209, 23%, 22%)',
-           boxShadow: '1px 1px 2px transparent'
+           boxShadow: '1px 1px 2px transparent',
+           
         }
       }else{
          return{
@@ -18,7 +19,7 @@ class Select extends Component{
    render(){
       return(
          <div className="selection" >
-             <select style={this.SelectColor()} className="py-2 pr-5 pl-2" onChange={this.props.SearchHandler} >
+             <select style={this.SelectColor()} className="py-2 pr-2 pl-2" onChange={this.props.SearchHandler} >
                  <option  defaultValue="Filter by region" selected disabled>Filter by region</option>
                  <option  value="africa">Africa</option>
                  <option  value="americas">America</option>

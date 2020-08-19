@@ -7,8 +7,10 @@ class ErrorBoundary extends Component{
           hasError: false
       }
   }
-  componentDidCatch(error, info){
+  componentDidCatch(error){
+    console.log(error + ' jhgfdsa')
       this.setState({ hasError: true});
+    return  <h1>An error occured</h1>
        
       
   }
@@ -16,6 +18,7 @@ class ErrorBoundary extends Component{
       
      if(this.state.hasError){
          return <h1>An error occured</h1>
+         
      }
      return <div style={{display:'none'}}><h6>a</h6></div>
      

@@ -28,12 +28,13 @@ class App extends Component{
         this.setState({isLoading: true})
         fetch('https://restcountries.eu/rest/v2/' + this.state.fetch)
         .then(response => response.json())
-        .then((data) => {this.setState({dataSet: data, isLoading: false , error: false});})
+       .then((data) => {this.setState({dataSet: data, isLoading: false , error: false});})
         .catch(error =>{
-              this.setState({isLoading: true})
-              console.log(error)
+          console.log('testininujuh')
+           this.setState({isLoading: true})
+             console.log(error)
               this.setState({ error: true,fetch:'all' , isLoading: false}, function(){
-              this.componentDidMount()
+            this.componentDidMount()
          })
 
        })
@@ -95,7 +96,7 @@ class App extends Component{
      render(){
 
          const body_style = {
-                  backgroundColor: 'rgb(243, 241, 241)',
+                  backgroundColor: 'rgb(240, 241, 245)',
          }
 
          const box = {
@@ -118,7 +119,7 @@ class App extends Component{
 
                                <Header changeMode = {this.changeMode.bind(this)} modal={this.state.modal} Headers = {this.Headers} />
                                <SectionTwo  SearchHandler = {this.SearchHandler} SearchNames = {this.SearchNames} modal={this.state.modal} state={this.state}/>  
-                               <h1 className="text-center pt-5" style={{width:'100%',height:'80vh'}}>Loading ....</h1>
+                               <h1 className="text-center pt-5 pb-0 mb-0" style={{width:'100%',height:'80vh'}}>Loading ....</h1>
 
                           </div> 
                    }
@@ -128,26 +129,27 @@ class App extends Component{
                                 <Header changeMode = {this.changeMode.bind(this)} Headers = {this.Headers} modal={this.state.modal}/>
                                 <SectionTwo  SearchHandler = {this.SearchHandler} SearchNames = {this.SearchNames} modal={this.state.modal}/>  
                                 <div className="main-box" style={main_box}>
-                                  <ErrorBoundary />
+                                  <ErrorBoundary isLoading = {this.isLoading} />
+                                  
                                    {this.state.dataSet.map((data , i) =>{
 
-                                       if(data.status || this.state.error){
+                                       if(!this.state.dataSet.map){
                                                 return <h3 key={data.name}>Item not found</h3>
                                        }else{
              
                                             return  <div key = {data.name} style={this.displayCheck()} onClick={this.captures}>
                                                 
                                                          <div id={i} key = {data.name} className="box" style={box}>
-                                                         <img id={i} src={data.flag} className="box-img" alt="country flag"></img>
-                                                         <h4 id={i} className="px-3 pt-2 pb-2">{data.name}</h4>
-                                                         <div id={i} className="datas"><h5 className="pl-3">Populatioin: </h5> <p className="pl-2">{data.population}</p></div>
-                                                         <div id={i} className="datas"><h5 className="pl-3">Region:</h5><p className="pl-2">{data.region}</p></div>
-                                                         <div id={i} className="datas"><h5 className="pl-3">Capital:</h5><p className="pl-2">{data.capital}</p></div>
+                                                        <div className="box-img "><img id={i} src={data.flag} style={{width:'100%',height:'100%'}} className="box-img pt-0 mt-o" alt="country flag"></img></div>
+                                                         <h5 id={i} className="px-3 pt-2 pb-2">{data.name}</h5>
+                                                         <div id={i} className="datas"><h6 className="pl-3">Populatioin: </h6> <p className="pl-2">{data.population}</p></div>
+                                                         <div id={i} className="datas"><h6 className="pl-3">Region:</h6><p className="pl-2">{data.region}</p></div>
+                                                         <div id={i} className="datas"><h6 className="pl-3">Capital:</h6><p className="pl-2">{data.capital}</p></div>
                                                          </div>
                                                           
                                                    </div> 
                                         }})}
-                                        <ErrorBoundary />
+                                        <ErrorBoundary isLoading = {this.isLoading} />
                                         {this.state.popup? <Details modal={this.state.modal} index={this.state.index} popupUpdate = {this.popupUpdate} dataSet={this.state.dataSet} /> : <div style={{display:'none'}}>test</div>}
                                         </div>  
                            </div>

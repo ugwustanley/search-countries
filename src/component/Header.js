@@ -25,17 +25,17 @@ class Header extends Component{
       flexWrap:"wrap"
     }
     const mode = {
-        fontSize: '18px',
-        fontWeight: 600    
+        fontSize: '16px',
+        fontWeight: 500    
     }
       return(
          <div className="p-3 Header" style={this.headers()}>
             <div className="container" style={Header2}>
             <div >
-             <h4 className="where">Where in the World?</h4>
+             <h5 className="where">Where in the World?</h5>
              </div>
             <div style={mode} onClick={changeMode} className="mode"> 
-             <i className="fas fa-moon"></i>
+             {this.props.modal?<i><i className="fas fa-star"></i></i> :<i className="fas fa-moon"></i>}
              <i className="pl-2" onClick={ () => this.props.changeMode}>{this.props.modal?<i>Light</i> : <i>Dark</i>} mode</i>
              </div>
              </div>

@@ -9,7 +9,8 @@ class Details extends Component{
         }
       }else{
          return{
-            color: '#444444'
+            color: '#444444',
+            backgroundColor: 'rgb(240, 241, 245)',
          }
       }
    }
@@ -39,16 +40,21 @@ class Details extends Component{
                 <img className="pop-img" src={dataSet[index].flag} alt="country flag"></img>
                 
             </div>
+            <div className="messages">
             <div className="message">
-      <h2 className="mt-3 dete1">{dataSet[index].name}</h2>
-      <h4 className="mt-5 dete">Native Name: <i>{dataSet[index].nativeName}</i></h4>
-      <h4 className="mt-3 dete"> Country Code: <i>{dataSet[index].callingCodes}</i></h4>
-      <h4 className="mt-3 dete">Capital: <i>{dataSet[index].capital}</i></h4>
-      <h4 className="mt-3 dete">Area: <i>{dataSet[index].area}</i></h4>
-      <h4 className="mt-3 dete">Populaton <i>{dataSet[index].population}</i></h4>
-      <h4 className="mt-3 dete">Time Zone: <i>{dataSet[index].timezones}</i></h4>
-      <h4 className="mt-3 dete">Subregion: <i>{dataSet[index].subregion}</i></h4>
-            </div>
+      <h5 className="mt-3  dete1">{dataSet[index].name}</h5>
+      <h6 className="mt-3 dete">Native Name:</h6> <i>{dataSet[index].nativeName}</i>
+      <h6 className="mt-3"> Country Code:</h6> <i>{dataSet[index].callingCodes}</i>
+      <h6 className="mt-3">Capital:</h6> <i>{dataSet[index].capital}</i>
+     
+      </div>
+      <div className="message mt-5">
+      <h6 className="mt-4 dete">Populaton:</h6> <i>{dataSet[index].population}</i>
+      <h6 className="mt-3">Time Zone:</h6> <i>{dataSet[index].timezones}</i>
+      <h6 className="mt-3">Subregion:</h6> <i>{dataSet[index].subregion}</i>
+            </div >
+          <div className="message mt-5"> <h6 className="mt-4 dete area">Area:</h6> <i>{dataSet[index].area}</i></div>
+          </div>
         </div>
        </div>
          </div>

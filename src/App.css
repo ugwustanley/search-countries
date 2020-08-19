@@ -6,17 +6,19 @@ body{
   overflow-x: hidden !important;
   font-family: 'Noto Sans TC', sans-serif;
 }
-
+#root{
+  max-width: 1400px;
+}
 .Header{
   display:flex;
   padding-top: 25px !important;
   background-color: #fff;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  border-bottom:1px solid lightgray;
-  box-shadow: 1px 1px 2px lightgray;
+ 
   min-height:70px;
   justify-content : space-between;
+  border-bottom: 3px solid rgba(211, 211, 211, 0.698);
 }
 .SectionTwo{
   display:flex;
@@ -28,23 +30,24 @@ body{
 input{
   border:none;
   outline:none;
-  font-size: 18px;
+  font-size: 16px;
   max-width:400px;
   border-radius: 0px;
   height: 100%;
   text-decoration: none;
+  border-radius: 3px;
 }
 select{
-  border:0px solid #444444;
-  box-shadow: 1px 1px 2px 1px lightgray;
+ padding: 120px !important;
+border: none;
+  box-shadow: 0px 1px 2px 1px lightgray;
   margin:auto;
   margin-top:20px;
-  font-size: 18px;
-  padding-right:16px !important;
+  font-size: 16px;
   width:200px;
   font-weight: 400;
   outline:none;
-  border-radius: 0px;
+  border-radius: 3px;
 }
 option{
   padding:10px !important;
@@ -56,6 +59,8 @@ option{
   justify-content: center;
   height:40px !important;
   margin-top:20px;
+  border-radius: 3px;
+  
 }
 .SearchBox{
 display:flex;
@@ -64,6 +69,7 @@ display:flex;
   border:none;
   height:100%;
   background-color: #fff;
+  border-radius: 3px;
 }
 .fa-search{
   padding-top: 10px;
@@ -76,19 +82,20 @@ display:flex;
 .main-box{
   width: 100%;
   display:flex;
-  justify-content: space-evenly;
+  justify-content:center;
   flex-wrap: wrap;
   margin-top:50px;
   background-color:rgb(243, 241, 241);
 }
 .box{
-  width:300px;
-  min-height:400px;
+  width:250px;
+  min-height:300px;
   border-radius: 2px;
   background-color:white;
-  margin:20px;
+  margin:15px;
   box-shadow: 1px 1px 4px 1px lightgray;
   border: 1px solid lightgray;
+  border-radius: 7px;
 }
 
 .box:hover{
@@ -102,6 +109,8 @@ display:flex;
   top:0px;
   margin-top:0px;
   border-bottom: 1px solid lightgray;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 .datas{
   display: flex;
@@ -117,9 +126,9 @@ display:flex;
  background-color: #fff;
 }
 button{
-    margin:20px;
+    margin:50px;
     padding:16px;
-    opacity: .6;
+ 
 }
 .details{
     display:flex;
@@ -128,17 +137,22 @@ button{
 }
 .img-box{
   max-width:96%;
-    width:500px;
-    min-height:400px;
+    width:400px;
+    min-height:350px;
     background-color: transparent;
     margin: 16px;
 
 }
 .message{
-    max-width:96%;
-    width:500px;
-    min-height:400px;
     margin:16px;
+}
+.messages{
+  max-width:500px;
+  display:flex;
+  flex-wrap: wrap;
+}
+.dete{
+  padding-top:30px !important;
 }
 .pop-img{
   width:100%;
@@ -146,24 +160,18 @@ button{
 }
 button{
   background-color:rgb(192, 192, 192);
-  color:#444444;
+  color:#fff !important;
 }
+
 @media(max-width:500px){
-  .dete1{
-    font-size: 28px;
-  }
-  .dete{
-    font-size:18px;
-  }
+  
   .img-box{
-    width:96%;
+    width:90%;
   }
-  .message{
-    width:96%;
-  }
+  
   .img-box{
-    height:300px;
-    min-height: 300px;
+    height:230px;
+    min-height: 250px;
   }
 }
 @media (min-width:1000px){
@@ -172,30 +180,28 @@ button{
   padding-right: 60px !important; 
   }
   .img-box{
-    margin-left:200px;
+    margin-left:00px;
   }
 }
 @media (max-width: 400px){
-  .mode{
-    margin-top: 20px !important;
+  button{
+    margin:14px;
   }
+  .area{
+    padding-top:-20px !important;
+   
+  }
+  
   input{
     width:100%;
   }
-  .SearchShadow{
-      width:100%;
-      box-shadow: 0px 1px 2px 1px lightgray;
-      margin-left: 10px !important;
-  }
+ 
   .Header{
       width: 100%;
       justify-content: center;
   }
  
-  select{
-    display: flex;
-    justify-self: center;
-  }
+  
   .fa-search{
     padding-top: 10px;
   
@@ -204,12 +210,10 @@ button{
     padding-left: 5px !important;
     padding-right: 5px !important;
   }
-  .selection{
-    margin:auto;
-  }
+  
   
 }
-@media(max-width:330px){
+@media(max-width:270px){
   .box{
     width:93%;
     margin-left:10px !important;
@@ -217,4 +221,20 @@ button{
 
   }
 }
-
+@media(max-width:365px){
+  .mode{
+    margin-top: 10px !important;
+  }
+  select{
+    display: flex;
+    justify-self: center;
+  }
+  .selection{
+    margin:auto;
+  }
+  .SearchShadow{
+    width:100%;
+    box-shadow: 0px 1px 2px 1px lightgray;
+    margin-left: 10px !important;
+}
+}
