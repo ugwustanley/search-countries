@@ -105,7 +105,7 @@ class App extends Component{
     
          const main_box = {
                   backgroundColor: 'rgb(243, 241, 241)',
-                  minWidth: '100vh'
+                  
          }
         if(this.state.modal){
                   body_style.backgroundColor = 'hsl(207, 26%, 17%)';
