@@ -8,6 +8,7 @@ class ErrorBoundary extends Component{
       }
   }
   componentDidCatch(error){
+    this.props.componentDidMount()  
     console.log(error + ' jhgfdsa')
       this.setState({ hasError: true});
     return  <h1>An error occured</h1>
