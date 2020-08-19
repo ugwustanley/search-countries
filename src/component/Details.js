@@ -48,7 +48,7 @@ class Details extends Component{
       <h6 className="mt-3">Capital:</h6> <i>{dataSet[index].capital}</i>
      
       </div>
-      <div className="message mt-5">
+      <div className="message middle mt-5">
       <h6 className="mt-4 dete">Populaton:</h6> <i>{dataSet[index].population}</i>
       <h6 className="mt-3">Time Zone:</h6> <i>{dataSet[index].timezones}</i>
       <h6 className="mt-3">Subregion:</h6> <i>{dataSet[index].subregion}</i>

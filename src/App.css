@@ -145,9 +145,13 @@ button{
 }
 .message{
     margin:16px;
+   
+}
+.middle{
+  max-width: 200px;
 }
 .messages{
-  max-width:500px;
+  max-width:600px;
   display:flex;
   flex-wrap: wrap;
 }
