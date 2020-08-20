@@ -41,7 +41,7 @@ class Details extends Component{
                 
             </div>
             <div className="messages">
-            <div className="message">
+            <div className="message msg-line1">
       <h5 className="mt-3  dete1">{dataSet[index].name}</h5>
       <h6 className="mt-3 dete">Native Name:</h6> <i className="details-value">{dataSet[index].nativeName}</i>
       <h6 className="mt-3"> Country Code:</h6> <i className="details-value">{dataSet[index].callingCodes}</i>
