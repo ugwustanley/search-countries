@@ -43,17 +43,17 @@ class Details extends Component{
             <div className="messages">
             <div className="message">
       <h5 className="mt-3  dete1">{dataSet[index].name}</h5>
-      <h6 className="mt-3 dete">Native Name:</h6> <i>{dataSet[index].nativeName}</i>
-      <h6 className="mt-3"> Country Code:</h6> <i>{dataSet[index].callingCodes}</i>
-      <h6 className="mt-3">Capital:</h6> <i>{dataSet[index].capital}</i>
+      <h6 className="mt-3 dete">Native Name:</h6> <i className="details-value">{dataSet[index].nativeName}</i>
+      <h6 className="mt-3"> Country Code:</h6> <i className="details-value">{dataSet[index].callingCodes}</i>
+      <h6 className="mt-3">Capital:</h6> <i className="details-value">{dataSet[index].capital}</i>
      
       </div>
       <div className="message middle mt-5">
-      <h6 className="mt-4 dete">Population:</h6> <i>{dataSet[index].population}</i>
-      <h6 className="mt-3">Time Zone:</h6> <i>{dataSet[index].timezones}</i>
-      <h6 className="mt-3">Subregion:</h6> <i>{dataSet[index].subregion}</i>
+      <h6 className="mt-4 dete">Population:</h6> <i className="details-value">{dataSet[index].population}</i>
+      <h6 className="mt-3">Time Zone:</h6> <i className="details-value">{dataSet[index].timezones}</i>
+      <h6 className="mt-3">Subregion:</h6> <i className="details-value">{dataSet[index].subregion}</i>
             </div >
-          <div className="message mt-5 area"> <h6 className="mt-4 dete area">Area:</h6> <i>{dataSet[index].area}</i></div>
+          <div className="message mt-5 area"> <h6 className="mt-4 dete area">Area:</h6> <i className="details-value">{dataSet[index].area}</i></div>
           </div>
         </div>
        </div>

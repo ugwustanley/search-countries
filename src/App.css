@@ -166,7 +166,10 @@ button{
   background-color:rgb(192, 192, 192);
   color:#fff !important;
 }
-
+.details-value{
+  font-weight: 100 !important;
+  font-size: 12px;
+}
 @media(max-width:500px){
   
   .img-box{
@@ -177,6 +180,7 @@ button{
     height:230px;
     min-height: 250px;
   }
+ 
 }
 @media (min-width:1000px){
   .Header{
@@ -229,6 +233,9 @@ button{
   .mode{
     margin-top: 10px !important;
   }
+  .SearchBox {
+    margin:auto;
+  }
   select{
     display: flex;
     justify-self: center;
@@ -239,6 +246,7 @@ button{
   .SearchShadow{
     width:100%;
     box-shadow: 0px 1px 2px 1px lightgray;
-    margin-left: 18px !important;
+    display: flex;
+    justify-self: center;
 }
 }
